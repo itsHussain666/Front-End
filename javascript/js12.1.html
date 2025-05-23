@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single/Multiple Expression</title>
+<script>
+    const addnum = (num1,num2)=> alert(num1+num2);
+    const dis = () => alert("Good Morning");
+    const diss = (msg) => alert("Hello "+msg);
+    const alpha= () => {
+        n=prompt("Enter your Name ");
+        m=n.charAt(0);
+        alert(m);
+    }
+    const citi= (name,city='Bidar') => alert (`${name} you r from ${city} city`);
+    const addition=(n1,n2,n3=100)=>{
+        n1=n1.value;n2=n2.value;
+        if(n1==undefined|| n2==undefined){
+            alert("Please Enter atleast 2 numbers");
+            return;
+        }else{
+            alert(Math.max(n1,n2,n3));
+        }
+        
+    
+        }
+
+    
+
+</script>
+</head>
+<body><form>
+    <input type="button" value="Add" onclick="addnum(12,12)"><br><br>
+    <input type="button" value="Display" onclick="dis()"><br><br>
+    <input type="button" value="Message" onclick="diss('Hussain')"><br><br>
+    <input type="button" value="First Character" onclick="alpha()">
+    ======================================================<br>
+    (Default Parameter)<br>
+  <input type="button" value="Info" onclick="citi('Zahid')"><br><br>
+  <input type="button" value="Info2" onclick="citi('Zahid','Bangalore')"><br><br>
+  Enter First Number:<input type="number" id="fnum"><br><br>
+  Enter Second Number:<input type="number" id="snum"><br><br>
+  Enter Third Number:<input type="number" id="tnum"><br><br>
+  <div id="alt"></div>
+  <input type="button" value="Addition" onclick="addition(this.form.fnum,this.form.snum,this.form.tnum)">
+
+</form>
+</body>
+</html>

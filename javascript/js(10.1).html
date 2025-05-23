@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        sum=1001
+        function increment(num){
+             sum = sum +1;
+            num.value= ""+sum;
+        }
+         
+         function decrement(num){
+             sum = sum -1;
+            num.value= ""+sum;
+         }
+
+
+        function display(num){
+            var d = new Date();
+            d.setDate(d.getDate() + 1);
+        
+            num.value=
+
+
+            document.cookie = "cname=" + escape(num) + " ;expires=" + d.toGMTString();
+            num.value=""+sum
+
+        }
+        function getCookie(name) {
+            if (document.cookie.length > 0) {
+                ind = document.cookie.indexOf(name);
+                if (ind != -1) {
+                    ind = ind + name.length + 1;
+                    ind1 = document.cookie.indexOf(";", ind);
+                    if (ind1 == -1)
+                        ind1 = document.cookie.length;
+                    return unescape(document.cookie.substring(ind, ind1));
+                }
+            }
+            return "";
+        }
+        function checkcookie(ccokiename) {
+            nowcookie = getCookie(ccokiename);
+            document.getElementById("cityname").value = nowcookie
+        }
+    </script>
+</head>
+<body onload="checkcookie(num)">
+    <form>
+        <div id="counter"> Counter:</div> 
+        <span id="count"><input type="number" value="1001" id="num"></span><br>
+    <input type="button" value="Increment" onclick="increment(this.form.num)" >  &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button" value="Decrement" onclick="decrement(this.form.num)"> 
+</form>
+</body>
+</html>

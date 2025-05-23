@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculate</title>
+    <script>
+        function AgeCal(){
+            var tdate= new Date();
+            alert("The date format is: Year,Month-1,Day")
+            var n=prompt("Enter your DOB");
+            var dob= new Date(n);
+            age=tdate-dob;
+            year=1000*60*60*24*365
+            alert("The Current Age is " +Math.floor(age/year));
+        }
+        function day(){
+            var tdate= new Date();
+            var n=prompt("Enter the last date");
+
+            var ldate= new Date(n);
+            age=ldate-tdate;
+            year=1000*60*60*24
+            alert("The No.of Days left  are " +Math.floor(age/year));
+        }
+        function over(){
+            document.images[1] .src="golgumbazz.jpg" ;
+             
+        }
+        function leave(){
+            document.images[1].src="BIDAR.jpg";
+        }
+        function validate(){
+            var uname=document.getElementById("uname").value;
+            var password=document.getElementById("password").value;
+            var conpass=document.getElementById("confirmpassword").value;
+            if(uname.length  == 0){
+                alert("Please Enter your User Name");
+            }
+            else if(!uname.startsWith('U') && !uname.startsWith('u')){
+                alert("The Acoount should start from (u,U) ")
+            }
+
+            else if(password.length==0){
+                alert("Please Enter your Password");
+            }
+            else if(password.length<8||password.length>12){
+                alert(" Password must be between 8-12 characters");
+            }
+            else if(!(conpass == password)){
+                alert("Password and Confirm Password must be same");
+            }
+
+            else{
+                alert("Welcome "+uname)
+                
+            }
+        }
+    </script>
+   
+
+    <img src="bijapur.jpg" height="200" width="300" onmouseover="over()" onmouseleave="leave()">
+    <img src="BIDAR.jpg" height="200" width="300">
+    
+</head>
+<body>
+    <form>
+    </br></br>
+        User Name:<input type="text" id="uname"></br></br>
+        Password:<input type="password" id="password"></br></br>
+        Confirm Password:<input type="password" id="confirmpassword"></br></br>
+        <input type="button" value="Login" onclick="validate()"></br></br>
+        <input type="button" value="Age" onclick="AgeCal()"></br></br>
+    <input type="button" value="Days" onclick="day()"></br></br>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Press</title>
+    <script>
+         counter=0;
+    
+        function process(name){
+             
+            counter++;
+            var n=document.getElementById("acc").value;
+            var m=document.getElementById("dis");
+            m.innerText=`The Process called is ${name} ,${counter} times`;
+            
+        }
+        c=0
+        function change(){
+        
+            c++;
+            var n=document.getElementById("acc").value;
+            var m=document.getElementById("dis1");
+            m.innerHTML=`The No.of Times changes made are ${c}`
+ }
+ cc=0
+ function proces(){
+    cc++;
+    var val=document.getElementById("comm").value;
+    var diss=document.getElementById("result");
+    var disss=document.getElementById("result1");
+    
+
+    if(val=='-1'){
+        diss.innerHTML=`<font color='red'>Please select an Option`;
+
+    }
+    else{
+        diss.innerHTML=`The Selected way to communicate is <u><b> ${val}`;
+    }
+    disss.innerHTML=`The No.of Times changes made are <b>${cc}`
+
+ }
+ function na(){
+    var nam=document.getElementById("name");
+    nam.value="Zahid";
+ }
+ 
+
+ 
+ function convert(){
+    
+    var nam=document.getElementById("upp");
+    nam.value=nam.value.toUpperCase();
+
+
+
+ }
+ 
+
+    </script>
+</head>
+<body>
+    Account Number:<input type="text" id="acc" name="acc"
+    onkeydown="process('down')" onkeypress="process('Press')" onkeyup="process('Up')" 
+    onchange="change()"><br><br>
+    Communication : 
+    <select name="comm" id="comm" onchange="proces('Nothing')">
+        <option value="-1">---select ---</option>
+        <option value="Email">Email</option>
+        <option value="SMS">SMS</option>
+        <option value="Phone">Phone</option>
+        <option value="Post">Post</option>
+    </select>
+    <div id="result">Please select an Option</div>
+    <div id="result1"> </div><br>
+    <div id="dis"></div><br>
+    <div id="dis1"></div>
+    Name:<input type="text" id="name"><br>
+    <input type="button" value="Submit" onclick="na()"><br><br>
+    Enter:<input type="text" id="upp" onkeyup="convert()"><br><br>
+    
+   
+</body>
+</html>

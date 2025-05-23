@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         function AgeCal(){
+        var tdate= new Date();
+        
+        var n=document.getElementById("year").value;
+        var m=document.getElementById("month").value;
+        var o=document.getElementById("date").value;
+        var dob= new Date(n,m-1,o);
+        age=tdate-dob;
+        year=1000*60*60*24*365
+        ress=Math.floor(age/year);
+    
+        try{ 
+            if(o.length==0||m.length==0||n.length==0){
+                throw"Please fill in all the fields"
+            }
+            else if(isNaN(o)||isNaN(m)||isNaN(n)){
+                throw"String is not Allowed,Please Enter a number "
+            }
+           else if(o>31 || m>12 || n>2025 || dob>tdate){
+            throw "Invalid Date "
+        }
+        else if(o<1 || m<1 || n<1 ){
+            throw "Negative Number not Allowed" 
+        }
+        else if(ress>120){
+            throw `${ress} is Over Age`
+        }
+    }
+        catch(err){
+            alert(""+err)
+            return;
+        }
+    
+        
+       
+        alert("The Current Age is " +Math.floor(age/year));
+    }
+
+    </script>
+</head>
+<body>
+    <table cellpadding="11">
+        <tr style="background-color: rgb(255, 136, 0);" ><td><h2> ITB2 </h2></td>
+           <td><h2> Age Calculator </h2></td></tr>
+        <tr><td>Date </td><td> <input type="text" id="date" required ></td></tr>
+        <tr><td>Month </td><td>  <input type="text" id="month" required></td></tr>
+        <tr><td>Year </td><td>  <input type="text" id="year"  required ></td></tr>
+        <tr><td></td><td><input type="button" value="Calculate Age" onclick="AgeCal()"></td></tr>
+    </table>
+        
+    
+</body>
+</html>

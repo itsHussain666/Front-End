@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Playlist with Volume</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="list">
+    <table border="1" cellspacing="5" cellpadding="10">
+        <tr onclick="songplay(this)" value="0" id="0"><td><li><a href="" > Tum se</a></li></td></tr>
+        <tr><td><li>Tu Har Lamha</li></td></tr>
+        <tr><td><li>Tum se hi</li></td></tr>
+        <tr><td><li>Hasi</li></td></tr>
+    </a>
+    </table>
+</div>
+
+  <div class="player">
+    <h2 id="title">Song Title</h2>
+    <audio id="audio" controls></audio>
+
+    <div class="controls">
+      <button onclick="prevSong()">⏮ Prev</button>
+      <button onclick="togglePlay()">⏯ Play/Pause</button>
+      <button onclick="nextSong()">⏭ Next</button>
+    </div>
+
+    <div class="volume-control">
+      <label for="volume">🔊 Volume</label>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

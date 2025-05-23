@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <script>
+        function chec(){
+            var gen=document.querySelector("input[name='gender']:checked").value;
+            var com=document.querySelector("input[name='comments']:checked").value;
+            if(gen.length==0){
+                return false;
+
+            }
+            else{
+                return gen;
+            }
+
+        }
+        function validate(){
+        
+            var uname=document.getElementById("uname").value;
+            var sname=document.getElementById("sname").value;
+           
+           
+           
+            var nam=document.getElementById("na");
+            var genn=document.getElementById("ge");
+            var comm=document.getElementById("co");
+
+            nam.innerText=`Your Name is ${uname}`;
+
+            gender=chec();
+             genn.innerText=`Selected Gender is ${gender}`
+        
+            if(uname.length == 0 || sname.length== 0){
+                nam.innerText="Please Enter your Name";
+            }
+            else if(gender==false){
+                genn.innerText=`${uname},Please Select Gender`;
+            }
+            else if(com.length==0){
+                comm.innerText=`${uname},Please select the Comment`;
+            }
+        }
+
+    </script>
+</head>
+<body><table border="1" cellpadding="10" >
+    <tr><td>User Name:</td>
+    <td><input type="text" id="uname" ></td></tr>
+    <tr><td>Last Name:</td>
+        <td><input type="text" id="sname" ></td></tr>
+        <tr><td>Gender:</td>
+            <td> <input type="radio" name="gender" value="male"  >Male</input><br>
+                <input type="radio" name="gender" value="female" >Female</input></td></tr>
+                <tr><td>Comments:</td>
+                    <td> <input type="radio" name="comments" value="like"  >Like</input><br>
+                        <input type="radio" name="comments" value="dlike"  >Don't Like</input>
+                    </td></tr>
+                    <tr><td colspan="2" align="center"><input type="button" value="Submit" onclick="validate()" ></td></tr>
+                    <tr><td colspan="2"><span id="na"></span></td></tr>
+                    <tr><td colspan="2"><span id="ge"></span></td></tr>
+                    <tr><td colspan="2"><span id="co"></span></td></tr>
+   
+    
+    </table>
+</body>
+</html>

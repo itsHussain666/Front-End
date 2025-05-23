@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <script>
+        class Employee {
+            constructor(firstName, salary) {
+                this.firstName = firstName;
+                this.salary = salary;
+            }
+            printEmployeeDetails() {
+                return `Employee Details are ${this.firstName} , ${this.salary}`
+            }
+        }
+        function Customer(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        Customer.prototype.printFullName = function () {
+            return `Customer Full Name is : ${this.firstName} , ${this.lastName}`
+        }
+
+        Employee.prototype.printSalary = function () {
+            return `Employee Salary is  ${this.salary}`
+
+        }
+
+        saeed = new Customer("Thymum", "Saeed");
+        alert(saeed.printFullName());
+        arshiya = new Customer("Arshiya", "Sherrif");
+        alert(arshiya.printFullName());
+
+
+        emp1 = new Employee("Varsha", "100000");
+        alert(emp1.printSalary());
+    </script>
+    
+</head>
+</html>

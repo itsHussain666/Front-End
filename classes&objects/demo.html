@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <script>
+        class review{
+            constructor(reviewID,comments,star){
+                this.reviewID=reviewID;
+                this.comments=comments;
+                this.star=star;
+                
+            }
+            addReview(comments,star){
+                comments=prompt("Enter comment");
+                star=prompt("Enter Ratings");
+                this.comments=comments;
+                this.star=star;
+            }
+
+        }
+        review.prototype.printreview=function(){
+            return ` ${this.reviewID} based comments is ${this.comments} and rates ${this.star} star` ;
+        }
+        dis= new review("101","good","5")
+        alert(dis.printreview());
+        dis.addReview();
+        alert(dis.printreview());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

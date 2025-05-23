@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        function change(){
+       var n= document.getElementById("select").value
+       localStorage.setItem("date",n)
+        }
+        function dis(){
+           var day= localStorage.getItem("date")
+           document.getElementById("select").value=day
+        }
+    </script>
+</head>
+<body onload="dis()">
+    <select id="select" onchange="change()">
+        <option>08-May-2025</option>
+        <option>09-May-2025</option>
+        <option>10-May-2025</option>
+        <option>11-May-2025</option>
+        <option>12-May-2025</option>
+        <option>13-May-2025</option>
+        <option>14-May-2025</option>
+    </select>
+    
+</body>
+</html>

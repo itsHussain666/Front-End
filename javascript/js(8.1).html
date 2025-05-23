@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Values</title>
+    <script>
+        function sum(){
+            ress=0;
+            var dis=document.getElementById("dis")
+            for(i=0;i<5;i++){
+                var n=document.forms[0].elements[i].value;
+                if(n.length == 0){
+                    dis.innerHTML="<font color=red>Please Fill in all the Fields";
+                        return;
+
+                }
+                else{
+                    ress += parseInt(n);
+                }
+                dis.innerHTML="<font color:green>The Sum of the given numbers is"+ress;
+
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form id="f1">
+        Enter Number1:<input type="number"><br><br>
+        Enter Number2:<input type="number"><br><br>
+        Enter Number3:<input type="number"><br><br>
+        Enter Number4:<input type="number"><br><br>
+        Enter Number5:<input type="number"><br><br>
+        Enter Number6:<input type="number"><br><br>
+        <input type="button" value="Add" onclick="sum()"><br><br>
+        <div id="dis"></div>
+    </form>
+    
+</body>
+</html>

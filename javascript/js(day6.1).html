@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         function validate(){
+            var uname=document.getElementById("uname").value;
+            var password=document.getElementById("password").value;
+            var conpass=document.getElementById("confirmpassword").value;
+            
+            var usererr=document.getElementById("unerr");
+            var passerr=document.getElementById("perr");
+            var cpasserr=document.getElementById("cperr");
+           
+            usererr.innerHTML="";
+            passerr.innerHTML="";
+            cpasserr.innerHTML="";
+            
+            if(uname.length  == 0){
+                usererr.innerHTML="<font color=red>Please Enter your User Name";
+            }
+            else if(!uname.startsWith('U') && !uname.startsWith('u')){
+                usererr.innerHTML="<font color=red>The Acoount should start from (u,U) "
+            }
+
+            else if(password.length==0){
+                passerr.innerHTML="<font color=red>Please Enter your Password";
+            }
+            else if(password.length<8||password.length>12){
+                passerr.innerHTML="<font color=red> Password must be between 8-12 characters";
+            }
+            else if(!(conpass == password)){
+                cpasserr.innerHTML="<font color=red>Password and Confirm Password must be same";
+            }
+
+            else{
+                alert("Welcome "+uname.toUpperCase())
+                
+            }
+        }
+        function dispaly(){
+            var msg=document.getElementById("message");
+            msg.innerText="Hello World";
+            var btn=document.getElementById("click");
+            btn.value="processing";
+            var span =document.getElementById("span");
+            span.innerHTML="<font color=red><b><u>kindly ,wait ";
+        }
+    </script>
+</head>
+<body>
+</br></br>
+User Name:<input type="text" id="uname"><span id="unerr"></span></br></br>
+Password:<input type="password" id="password"><span id="perr"></span></br></br>
+Confirm Password:<input type="password" id="confirmpassword"><span id="cperr"></span></br></br>
+<input type="button" value="Login" onclick="validate()"></br></br>
+<div id="message">
+Hello
+
+</div>
+<input type="button" value="click" onclick="dispaly()" id="click"><span id="span"></span></br></br>
+
+    
+</body>
+</html>

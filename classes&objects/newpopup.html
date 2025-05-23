@@ -1,0 +1,50 @@
+<HTML>
+    <BODY>
+    <script language="javascript">
+    var frequency = new Array(6);
+    var faceValue; // 1 to 6
+    var trials=0; // number of throws in simulation
+    trials = parseInt(window.prompt(
+       "How many trials do you want?", "6000"));
+    
+    // Initialize frequencies to 0
+    
+    for (var k = 0; k < frequency.length; k++)
+    {
+       frequency[k] = 0;
+    }
+    
+    
+    // Calculate frequency table
+    
+    for (var roll = 1; roll <= trials; roll++)
+    {
+       faceValue = Math.floor(1 + Math.random()*6);
+       frequency[faceValue - 1]++;
+    }
+    
+    var w = window.open("","result", "resizable,menubar,width=400,height=400");
+    
+     w.document.writeln(   "<h1>Frequency table for " + trials +  " rolls of a die</h1>");
+     w.document.writeln(   "<table border=6 cellpadding=5 width=50%>");
+     w.document.writeln("<tr>");
+     w.document.writeln("<th align=left   width=33%>Face</th>");
+     w.document.writeln("<th align=left width=33%>Frequency</th>");
+     w.document.writeln("<th align=left width=33%>Percent</th>");
+     w.document.writeln("</tr>");
+    
+    for (var k = 0; k < frequency.length; k++)
+    {  var percent = 100*(frequency[k]/trials);
+       percent = Math.round(100*percent)/100;
+        w.document.writeln("<tr><td>" + (k+1) +"</td>");
+        w.document.writeln("<td>" + frequency[k] + "</td>");
+        w.document.writeln("<td>" + percent + "</td>");
+        w.document.writeln("</tr>");
+    }
+     w.document.writeln("</table>");
+    window.alert ("In javaScript");
+    </script>
+    
+    
+    </BODY>
+    </HTML>

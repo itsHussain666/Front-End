@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braek</title>
+    <script>
+       let total=0;
+        function break1(){
+            var res=0
+            alert("Welcome to the Break method"); 
+            alert(" You can Enter 3 numbers & 0 is Not Allowed ")
+            for(i=1;i<4;i++){
+                var n=parseInt(prompt(`Enter the ${i} number`));
+                if(n==0){
+                    alert("Number 0 not allowed");
+                    break;
+                }
+                res=res+n;
+            }
+            alert(`The sum of  numbers is ${res} `)
+        }
+        function continu(){
+            var res=0
+            alert("Welcome to the Continue method"); 
+            alert(" You can Enter 5 numbers & 0 is Not Allowed ")
+            for(i=1;i<6;i++){
+                var n=parseInt(prompt(`Enter the ${i} number`));
+                if(n==0){
+                    alert("Number 0 Invalid");
+                    continue;
+                }
+                res=res+n;
+            }
+            alert(`The sum of Valid numbers is ${res} `)
+        }
+        function retrn(){
+            var res=0
+            alert("Welcome to the Return method"); 
+            alert(" You can Enter 4 numbers & 0 is Not Allowed ")
+            for(i=1;i<5;i++){
+                var n=parseInt(prompt(`Enter the ${i} number`));
+                if(n==0){
+                    
+                    return alert(`${n} is Invalid` );
+                }
+                res=res+n;
+            }
+            alert(`The sum of Valid numbers is ${res} `)
+        }
+        function sum(){
+            y=20
+             x=10;
+             total=x+y;
+            
+        }
+        function dis(){
+            sum()
+            alert(total);
+            alert(y);
+            alert(x);
+        }
+        function pop(){
+            var n=prompt("Enter First Name");
+            var m=prompt("Enter Second Name");
+            p=n.charAt(0);
+            alert(`Welcome Mr. ${p} ${m}`)
+        }
+        function dates(){
+
+            date2 = new Date();
+             //today=new Date("July 10,2010 11:13:00");
+             //tom=new Date("oct 26,2025,06:00:13");
+             tomm=new Date(2025,2,19,9,30,13);
+             tomm.setYear(2001);
+             tomm.setMonth(9);
+             tomm.setDate(26);
+             tomm.setHours(18);
+             tomm.setMinutes(27);
+             tomm.setSeconds(59);
+             
+            
+            alert("Now Date is " +date2);
+           // alert("Today Date is "+today);
+            //alert("Tomorw Date is "+tom);
+            alert("Tomorw Date is "+tomm);
+
+        }
+        function loan(){
+            tname=prompt ("Enter Your Loan Account Number(LB,TB,NH,LH) ")
+            lname=tname.toUpperCase();
+            sname=['LB','TB','NH','LH']
+            res= sname.some(x => lname.startsWith(x))
+            if(res==false){
+                alert("The Acoount should start from (LB,TB,NH,LH) ")
+            }
+            else if(lname.length > 8 ){
+                alert("Account number consist of onlu 8 characters")
+            }
+            else{
+                alert ("Welcome ")
+            }
+
+            }
+        
+    </script>
+    <input type="button" value="Break" onclick="break1()"><br/><br/>
+    <input type="button" value="Continue" onclick="continu()"><br/><br/>
+    <input type="button" value="Return" onclick="retrn()"><br/><br/>
+    <input type="button" value="Variables" onclick="dis()"><br/><br/>
+    <input type="button" value="charAt" onclick="pop()"><br/><br/>
+    <input type="button" value="Date" onclick="dates()"><br/><br/>
+    <input type="button" value="Loan" onclick="loan()"><br/><br/>
+
+</head>
+<body>
+    
+</body>
+</html>

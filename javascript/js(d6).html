@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Bill(){
+        var date=new Date();
+        var month=date.getDate()
+        
+        var bill= document.getElementById("Bill").value;
+        if(bill.length != 7){
+            alert(" Plese,Enter a Valid Bill Number (7 - Characters)");
+            }
+            else{
+        var cc= (prompt("Enter,Credit Card Number(8- Numbers)"));
+              if ( cc.length <8 ||cc.length >8){
+                  alert("Please,Enter a valid Credit Card Number")
+        
+                          }
+                    else{
+                           amount=0
+                                amount=parseInt(prompt("Enter,the Bill Amount"));
+                              
+            
+                                    if(month<=5){
+                                           alert("Amount to be paid is "+amount)
+                                             }
+                                            
+                                       else if(amount== 0){
+                                             alert("Enter your bill amount");
+                                                    return;
+                                                  }
+                                               else{
+                                                for(i=6;i==month;i++){
+                                                   total = amount+50;
+                                                   return alert(+total);
+                                             }
+                                                   
+                alert(`The Toatl Amount to be paid is ${total} \n (a fine 0f Rupees 50,per day)`);
+                                                   return;
+                
+                
+
+
+            }
+
+        }
+    }
+}
+    
+    </script>
+
+</head>
+<body>
+ <h1> BESCOM </h1>
+ <table>
+    <tr><td>Enter, your Bill Number (7 - Characters)</td></tr>
+    
+    <tr><td><input type="text" id="Bill"> </td></tr>
+        <td><input type="button" value=" Pay Bill" onclick="Bill()"></td></tr>
+ </table>
+    
+</body>
+</html>

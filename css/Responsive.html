@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    
+    background-color:lightgreen;
+}
+@media only screen and (min-width: 750px) {
+
+.username:before
+{
+ content:"Please enter User Name :";
+}
+ body	
+{
+   background-color:rgb(227, 11, 47);
+}
+.name::before{
+content: "Welcome,Syed Zahid Hussain";
+}
+}
+@media only screen and (min-width: 600px) {
+   .username:before
+   {
+	content:"Username";
+   }
+    body	
+   {
+      background-color:rgb(5, 171, 226);
+   }
+   .name::before{
+content: "Syed Zahid";
+   }
+}
+@media only screen and (min-width: 980px) {
+
+   .username:before
+   {
+	content:"Please enter User Name :";
+   }
+    body	
+   {
+      background-color:pink;
+   }
+   .name::before{
+content: "Syed Zahid Hussain";
+   }
+}
+@media only screen and (max-width: 500px) {
+
+   .username:before
+   {
+	content:"";
+	
+   }
+   body	
+   {
+      background-color:lightblue;
+   }
+   .name::before{
+content: "Zahid";
+   }
+}
+</style>
+</head>
+<body>
+
+<p class="name"></p>
+
+<div class="username">
+<input type="text">
+</div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        fname='';
+        function param(data){
+            
+          fname=fname.concat(data.value)+" ";
+            var out=document.getElementById("output");
+            out.innerHTML="welcome "+fname;
+            
+        }
+        
+        function sum(num1,num2){
+            num=0
+        
+
+            
+            
+        
+            num= parseInt(num1.value)+parseInt(num2.value);
+            
+            var sum=document.getElementById("sum");
+           
+            sum.innerHTML="Sum:"+num;
+            
+            
+        }
+            
+        
+       
+    
+    </script>
+</head>
+<body>
+    First Name:<input type="text" onblur="param(this)"><br><br>
+    Middle Name:<input type="text" onblur="param(this)"><br><br>
+    Last Name:<input type="text" onblur="param(this)"><br><br>
+    <div id="output"></div><br><br>
+    <form>
+    First Number:<input type="number" id="fir"  ><br><br>
+    Second Number:<input type="number" id="sec " onkeyup="sum(this.form.fir,this)"><br><br>
+    <div id="sum">Sum:</div><br><br>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background:white;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    
+  }
+  .player {
+    background: #961ddc;
+    border-radius: 10px;
+    padding: 30px;
+    display: inline-block;
+  }
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #666;
+  }
+  table{
+    text-align: left;
+    
+  }
+
+  

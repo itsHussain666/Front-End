@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pincode</title>
+    <script>
+        function leng(pin){
+           var  output=document.getElementById("dis")
+                     var regex=/^(\d{6})$/;
+                     var regexx=/^(\+91-\d{10})$/;
+                     var result=regexx.exec(pin.value);
+                     if(result==null){
+                        output.innerHTML="Invalid User "
+                     }
+                     else{
+                        output.innerHTML="Valid User"
+                     }
+                     }
+           
+            
+           
+
+        
+        function validate(){
+
+        }
+    </script>
+</head>
+<body><form>
+    <input type="text" id="txt" maxlength="15">
+    <input type="button" value="Apply" onclick="leng(this.form.txt)">
+    <div id="dis"></div>
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <script>
+        function store(){
+            var n=document.getElementById("size").value;
+            localStorage.setItem("size",n)
+            alert("Your Size was Recorded")
+        }
+        function dis(){
+           var size= localStorage.getItem("size");
+           document.getElementById("size").value=size;
+        }
+    </script>
+</head>
+<body onload="dis()">
+    Size:<input type="text" id="size" name="size">
+    <br><br>
+    <input type="button" value="Search" onclick="store()">
+    
+</body>
+</html>

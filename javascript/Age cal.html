@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         function loan(){
+            var tname=document.getElementById("ac").value;
+            lname=tname.toUpperCase();
+            sname=['LB','TB','NH','LH']
+            res= sname.some(x => lname.startsWith(x))
+            if(res==false){
+                alert("The Account should start from (LB,TB,NH,LH) ")
+            }
+            else if(lname.length <8 || lname.length >8  ){
+                alert("Account number consist of only 8 characters")
+            }
+            else{
+                alert ("WELCOME " )
+            }
+
+            }
+            function AgeCal(){
+        var tdate= new Date();
+        
+        var n=document.getElementById("year").value;
+        var m=document.getElementById("month").value;
+        var o=document.getElementById("date").value;
+        if(o>31){
+            alert("Invalid Date ")
+        }
+        else if(m>12){
+            alert ("Invalid Month")
+        }
+        else if(dob>tdate){
+            alert ("Invalid Year")
+        }
+        else{
+        var dob= new Date(n,m-1,o);
+        age=tdate-dob;
+        year=1000*60*60*24*365
+        alert("The Current Age is " +Math.floor(age/year));
+    }
+}
+    </script>
+    <style>
+        h2{
+            color: white;
+        }
+        h1{
+            background-color: beige;
+        }
+        table{
+            background-color:whitesmoke;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>ITB2 Bank</h1>
+    <table  cellpadding="11">
+        <tr style="background-color: rgb(255, 136, 0);"><td><h2>  Manage your Loan Account</h2></td></tr>
+        <tr><td><b>Enter Home Loan Account Number</b></td></tr><br/></br>
+        <tr><td> Please Enter your8-characters alpahnumeric</br>
+        Loan Account Number* </td> </tr>
+        <tr><td><input type="text" id="ac" placeholder="Starts with LB,TB,NH or LH "></td></tr>
+        <tr><td><input type="button" value="PROCEED" onclick="loan()"></td></tr>
+    </table>
+</br>
+</br>
+</br>
+<table cellpadding="11">
+    <tr style="background-color: rgb(255, 136, 0);" ><td><h2> ITB2 </h2></td>
+       <td><h2> Age Calculator </h2></td></tr>
+    <tr><td>Date </td><td> <input type="number" id="date" required ></td></tr>
+    <tr><td>Month </td><td>  <input type="number" id="month" required></td></tr>
+    <tr><td>Year </td><td>  <input type="number" id="year"  required ></td></tr>
+    <tr><td></td><td><input type="button" value="Calculate Age" onclick="AgeCal()"></td></tr>
+</table>
+    
+</body>
+</html>

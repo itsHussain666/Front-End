@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Catch</title>
+    <script>
+        const display=()=>alerta("Good Morning");
+        const dis=()=>{
+            alert("Welcome");
+            try{
+            display();
+        }
+            catch(err){
+                alert("The exception Occured at"+err)
+            }
+
+            alert("Good Bye");
+        }
+        const divide=(num1,num2)=>{
+            try{
+            num3=num1.value/num2.value;}
+            catch (err){
+            if(err==Infinity)
+                res.innerHTML="Division  not possible "+err;
+                }
+           var  res=document.getElementById("result");
+            res.innerHTML=(`Result of ${num1.value} divided by ${num2.value} is :${num3}`)
+            alert("Thanks for using My calculator")
+            }
+        
+    </script>
+</head>
+<body><form>
+    <input type="button" value="Click" onclick="dis()"><br><br>
+    Number1<input type="number" id="num1"><br>
+    Number2<input type="number" id="num2"><br>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <input type="button" value="Divide" onclick="divide(this.form.num1,this.form.num2)">
+</form>
+</body>
+</html>

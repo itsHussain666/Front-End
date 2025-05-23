@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculateEMI(){
+            val=validate()
+            P=num1;
+            N=num2;
+            R=num3;
+            output=document.getElementById("output");
+            if(val==true){
+                let  EMI = [P * R * (1+R) ^N]/[(1+R) ^N-1];
+                output.innerHTML="<b><u>The EMI per Month  for the Given Data is $" +EMI;
+
+            }
+
+        }
+         function validate(){
+             num1=document.getElementById("num1").value;
+             num2=document.getElementById("num2").value;
+             num3=document.getElementById("num3").value;
+           
+             numm1=document.getElementById("numm1");
+             numm2=document.getElementById("numm2");
+             numm3=document.getElementById("numm3");
+             
+           
+             numm1.innerHTML="";
+             numm2.innerHTML="";
+             numm3.innerHTML="";
+           
+            if(num1==0){
+                numm1.innerHTML="<font color=red>Please Enter Principal amount"
+            }
+            else if(num2==0){
+                numm2.innerHTML="<font color=red>Please Enter Tenure"
+            }
+            else if(num3==0){
+                numm3.innerHTML="<font color=red>Please Enter Interest"
+            }
+            else{
+                return true;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>EMI Calculator</h2>
+        Principal:<input type="number"  id="num1" onfocus="validate()"><br>
+       <div id="numm1"></div>
+       Tenure: <input type="number"  id="num2" onfocus="validate()"><br>
+        <div id="numm2"></div>
+       Interest: <input type="number" id="num3" onfocus="validate()"><br>
+        <div id="numm3"></div>
+        <input type="button" value="Calculate EMI" onclick="calculateEMI()" >
+        <span id="output"></span>
+    </div>
+
+    
+</body>
+</html>

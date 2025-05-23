@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Options</title>
+    <script>
+        function removeciti(removecity, citieslist) {
+            var lengthofcities = citieslist.length;
+            for (i = 0; i < lengthofcities; i++) {
+                if (citieslist[i].value == removecity.value) {
+                    citieslist[i] = null;
+                    break;
+                }
+            }
+        }
+
+
+
+        function aaa(addcity, citieslist) {
+            var lengthofcities = citieslist.length;
+
+            for (i = 0; i < lengthofcities; i++) {
+                if (citieslist[i].value == addcity.value) {
+                    alert("city already exists")
+                    return;
+                }
+            }
+
+            var option = new Option(addcity.value, addcity.value);
+            citieslist[lengthofcities] = option;
+
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <form>
+        <table cellpadding="7">
+            <tr>
+                <td> City to Add:</td>
+                <td> <input type="text" name="addcity" id="addcity" onblur="aaa(this,this.form.cities)"> </td>
+            </tr>
+            <tr>
+                <td> City to Remove:</td>
+                <td> <input type="text" name="removecity" id="removecity" onblur="removeciti(this,this.form.cities)">
+                </td>
+            </tr>
+            <tr>
+                <td>Cities:</td>
+                <td><select name="cities" id="cities">
+                        <option value="0">---Select---</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Mysore">Mysore</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mangalore">Mangalore</option>
+                    </select> <span id="alrt"></span></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

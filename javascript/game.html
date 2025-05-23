@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <script>
+       
+        function game(){
+            for(i=1;i<4;i++){
+             var n=prompt(`Enter ${i} Guess Number (1-10)`);  
+             s=rand();
+             if(n==s){
+                alert("YOU WON");
+                return;
+
+            }
+            else{
+                alert("OOps,Try again")
+            }
+            }
+            alert(`Game Over ,The Number was ${s}`)
+        }
+        function rand(){
+        p=Math.floor(Math.random()*10)
+        
+        return p;
+    }
+   
+    </script>
+    
+</head>
+<body>
+    
+        <h2>Welcome to Hussain's Game</h2>
+        <h3>You have 3 chances to Guess the Correct Number  </h3>
+         <button onclick="game()" >PLAY</button> 
+        
+        
+
+
+
+
+    
+</body>
+</html>

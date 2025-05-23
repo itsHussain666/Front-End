@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+</head>
+<body>
+    <p> Click the button to Get your Co-Ordinates.</p>
+   <input type="button"  value="Try !t" onclick="getlocation()">
+   <p id="demo">Your Location will come Here!...</p>
+   <script>
+   var x=document.getElementById("demo");
+   function getlocation(){
+   navigator.geolocation.getCurrentPosition(mymethod,myerror);
+   }
+   function mymethod(position){
+    x.innerHTML="Latitude= "+position.coords.latitude +"<br> Longitude= " +position.coords.longitude;
+   }
+   function myerror(error){
+    x.innerHTML="Error Occured "+error.code;
+    
+   }
+   </script>
+    
+</body>
+</html>

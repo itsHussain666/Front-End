@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fill(){
+            var name=document.getElementById("pn");
+            name.value="PEN DRIVE";
+        }
+        function calculate(num1,num2){
+            var price=document.getElementById("tp");
+            var alt=document.getElementById("alt");
+            var allt=document.getElementById("allt");
+            alt.innerHTML='';
+            allt.innerHTML='';
+            var n=parseInt(num1.value);
+            var m=parseInt(num2.value);
+            if(n<0 ){
+                
+                alt.innerHTML="<font color=red>You cant,Enter Negative value";
+                
+            }
+            else if(m<0){
+                allt.innerHTML="<font color=red>You cant,Enter Negative value";
+
+            }
+            else if(n.length==0||m.length==0){
+                alt.innerHTML="Please fill both the Columns"
+            }
+            else{
+                price.innerHTML=`${m*n}`;
+            }
+
+
+        }
+    </script>
+</head>
+<body onload="fill()">
+    <form id="f1">
+        ProductName:<input type="text" id="pn"> <br><br>
+        Price:<input type="number" id="price" > <span id="alt"></span><br><br>
+        Quantity:<input type="number" id="quantity" ><span id="allt"></span><br><br>
+        Total Price:<span id="tp"></span><br><br>
+    
+        <input type="button" value="Bill " onclick="calculate(this.form.price,this.form.quantity)">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Type</title>
+    <script>
+        
+        function add(newloan,loanlist){
+            var lengthoflist=loanlist.length;
+            var num=document.getElementById("numberofloan");
+            var alreadypresent=document.getElementById("typepresent");
+            var addsucessfully=document.getElementById("typeadded");
+    
+            if(newloan.value.length==0){
+                alert("Enter loan");
+                return;
+            }
+        
+           
+            for(i=0;i<lengthoflist;i++){
+                if(loanlist[i].value == newloan.value){
+                    alreadypresent.innerHTML=`<font color=red>${newloan.value} loan already present`;
+                    return;
+                    }
+                
+                }
+
+            num.innerHTML=`${lengthoflist}`
+            var option=new Option(newloan.value,newloan.value);
+            loanlist[lengthoflist]=option;
+            addsucessfully.innerHTML=`<font color=green>${newloan.value} loan added Sucessfully`;
+
+            }
+        
+    </script>
+</head>
+<body>
+    <form>
+        <table>
+            <tr><td>Add Loan Type:</td>
+            <td><input type="text " id="addloan">
+            <input type="button" value="ADD" onclick="add(this.form.addloan,this.form.loanlist)">
+        </td></tr>
+        <tr><td>Loan Type:</td>
+        <td><select id="loanlist">
+            <option value="0">---select---</option>
+            <option value="Home">Home</option>
+            <option value="Car">Car</option>
+            <option value="Personal">Personal</option>
+        </select></td></tr>
+        <tr><td>Loan Type Number:</td>
+        <td><span id="numberofloan" ></span></td></tr>
+        <tr><td colspan="2"><span id="typepresent"></span></td></tr>
+        <tr><td colspan="2"><span id="typeadded"></span></td></tr>
+        </table>
+    </form>
+    
+</body>
+</html>

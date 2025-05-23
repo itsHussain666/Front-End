@@ -1,0 +1,43 @@
+<HTML>
+    <Body onload="First()">
+    <img name="MyImage" src="" height="300" width="400" /><BR>
+    <script language="javascript">
+        var a=new Array ("A.jpg","B.jpg","C.jpg","D.jpg");
+        var c;
+        function Next ()
+        {
+            c++;
+            if(c==a.length)
+                c--;	
+            MyImage.src=a[c];
+        }
+        function Previous ()
+        {
+            c--;
+            if(c < 0)
+                c=0;
+
+            MyImage.src=a[c];
+    
+        }
+        function First ()
+        {
+            c=0;
+            MyImage.src=a[c];
+            document.Aeroplane.first.disabled
+        }
+        function Last ()
+        {
+            c=a.length-1;
+            MyImage.src=a[c];
+        }
+    </script>
+    <BR>
+    <BR><form id="Aeroplane">
+    <input type="button" value="Next" onclick="Next()" dis  />
+    <input type="button" value="Previous" id="previous" onclick="Previous()" />
+    <input type="button" value="First" id="first" onclick="First()" />
+    <input type="button" value="Last" onclick="Last()" />
+</form>
+    </body>
+    </html>

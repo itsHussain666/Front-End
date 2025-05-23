@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <script>
+       
+        function game(){
+            var random=rand()
+            for(i=0;i<3;i++){
+            
+                var n=document.forms[0].elements[i].value;
+                var dis=document.getElementById("dis");
+                
+                if(n== random){
+                // alert(`Congratulations,${random} was the random number, you won the Game.`)
+                //  return;
+             dis.innerHTML = `Congratulations,${random} was the random number, you won the Game.`
+            }
+            else{
+                
+    
+            }
+        }
+         
+        //  alert(` doesnt match ,the correct answer was ${random}`);
+         dis.innerHTML=` doesnt match ,the correct answer was ${random}`
+
+        
+        }
+        function rand(){
+        p=Math.floor(Math.random()*10)
+        
+        
+        return p;
+    }
+   
+    </script>
+    
+</head>
+<body>
+    
+        <h2>Welcome to Hussain's Game</h2>
+        <h3>You have 3 chances to Guess the Correct Number  </h3>
+        <form>
+        Number1:<input type="number" ><br><br>
+        Number2:<input type="number" ><br><br>
+        Number3:<input type="number" ><br><br>
+         <button onclick="game()" >PLAY</button><br><br>
+         <div id="dis"></div>
+         </form>
+        
+        
+
+
+
+
+    
+</body>
+</html>

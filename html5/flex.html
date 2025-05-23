@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        div {
+            border: 1px solid black;
+            border-width: 2px 2px;
+            width: 300px;
+            height: 200px;
+            display: inline-block;
+        }
+
+        body {
+            display: flex;
+        }
+    
+    </style>
+    <script>
+        function transfer(env){
+            alert("Transferring Image "+env.target.id)
+
+        }
+        function dispaly(env){
+            alert(`Mouse Clicked at X:${env.clientX} and Y:${env.clientY}`)
+        }
+        function display2(env){
+            alert(`Key Pressed is: ${env.key} `)
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <figure>
+            <img src="./../MD.jpg" height="150" width="300" id="card"
+            draggable="true" ondragstart="transfer(event)" >
+        </figure>
+    </div>
+    <div onclick="dispaly(event)" id="Hello"></div>
+    <div>
+        <input type="text" id="username" onkeypress="display2(event)">
+    </div>
+    
+</body>
+</html>

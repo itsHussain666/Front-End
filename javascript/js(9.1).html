@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluate</title>
+    <script>
+        function display(state, cities) {
+            cities.style.display = "block";
+            var apcity=["Warangal","Tirupati","Ongle"];
+            var kacity=["Bangalore","Bidar","Bijapur"];
+          var tncity=["Hosur","Chennai","Koimbatur"];
+            if (state.value == 'andrapradesh') {
+                var apcity = ["Warangal", "Tirupati", "Ongle"];
+                for (i = 0; i < apcity.length; i++) {
+                    var option1 = new Option(apcity[i], apcity[i])
+                    cities[i] = option1;
+                }
+            }
+            else if (state.value == 'karnataka') {
+                var kacity = ["Bangalore", "Bidar", "Bijapur"];
+                for (i = 0; i < kacity.length; i++) {
+                    var option2 = new Option(kacity[i], kacity[i])
+                    cities[i] = option2
+                }
+            }
+            else if (state.value == 'tamilnadu') {
+                var tncity = ["Hosur", "Chennai", "Koimbatur"];
+                for (i = 0; i < tncity.length; i++) {
+                    var option3 = new Option(tncity[i], tncity[i])
+                    cities[i] = option3;
+                }
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <form>
+        <h3>Cities of the State's</h3>
+        <table>
+            <tr>
+                <td>State:</td>
+                <td><select onchange="display(this,this.form.cities)">
+                        <option>---select---</option>
+                        <option value="karnataka">Karnataka</option>
+                        <option value="tamilnadu">Tamil Nadu</option>
+                        <option value="andrapradesh">Andra Pradesh</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td>Cities:</td>
+                <td><select id="cities" style="display:none">
+
+                    </select></td>
+            </tr>
+
+        </table>
+
+    </form>
+</body>
+
+</html>

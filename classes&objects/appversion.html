@@ -1,0 +1,21 @@
+<HTML>
+    <HEAD>
+    <TITLE>First Java Script</title>
+    </HEAD>
+    <Body>
+    <H1>Browser Details</H1><BR>
+    <SCRIPT LANGUAGE="javascript">
+    document.write ("Browser version : " + navigator.appVersion);
+    document.write ("Name : " + navigator.appName +"<BR>");
+    if(navigator.cookieEnabled)
+        window.alert ("Cookies Enabled...");
+    else
+        window.alert ("Cookies Disabled...");
+    document.write ("Browsers target platform : " + navigator.platform);
+    if (navigator.javaEnabled ())
+        alert ("Browser is Java enabled...");
+    else
+        alert ("Browser is not Java enabled...");
+    </script>
+    </body>
+    </html>

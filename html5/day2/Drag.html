@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        div {
+            border: 1px solid black;
+            border-width: 3px 2px;
+            width: 300px;
+            height: 200px;
+            display: inline-block;
+        }
+
+        body {
+            display: flex;
+        }
+    
+    </style>
+    <script>
+        function transfer(env){
+            env.dataTransfer.setData("img",env.target.id)
+            }
+       
+       
+        function drop(env){
+           var img= env.dataTransfer.getData("img");
+           env.target.appendChild(document.getElementById(img))
+        }
+        function allow(env){
+            env.preventDefault()
+             }
+    </script>
+</head>
+<body>
+    <div>
+        <figure>
+            <img src="./../../MD.jpg" height="150" width="250" id="img"
+            draggable="true" ondragstart="transfer(event)" ondragover="allow(event)" ondrop="drop(event)" >
+        </figure>
+    </div>
+    <div ondrop="drop(event)" ondragover="allow(event)" id="Hello"></div>
+    <div ondragover="allow(event)" ondrop="drop(event)" >
+        
+    </div>
+    
+</body>
+</html>

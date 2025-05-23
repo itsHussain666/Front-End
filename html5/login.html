@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            text-align: center;
+        }
+        .container input[type="text"],
+        .container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function checkeed(n){
+             var uname=document.getElementById("uname").value;
+            var pass=document.getElementById("pass").value
+         if(n.checked){
+            localStorage.setItem("user",uname)
+         localStorage.setItem("password",pass)
+        }
+        else{
+            localStorage.removeItem("user")
+            localStorage.removeItem("password")
+       } 
+    }
+        function display(){
+           var uname= localStorage.getItem("user")
+            var pass=localStorage.getItem("password")
+        
+            document.getElementById("uname").value=uname;
+            document.getElementById("pass").value=pass;         
+        }
+    </script>
+</head>
+<body onload="display()">
+    <div class="container">
+        <h2>Login</h2>
+        <form action="sucess.html" method="get" >
+            <input type="text" id="uname" name="username" placeholder="Username" required>
+            <input type="password" id="pass" name="password" placeholder="Password" required>
+            <input type="checkbox" id="check" >remember ME<br>
+            <input type="submit" value="Login" onclick="checkeed(this.form.check) "><br><br>
+            <input type="submit" formaction="register.html" value="Register">
+        </form>
+    </div>
+</body>
+</html>

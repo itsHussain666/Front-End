@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(){
+        
+            var number= document.getElementById("frnd").value;
+            var myform=document.getElementById('head');
+               for(i=1;i<=parseInt(number);i++){
+                var newtext=document.createElement('h3');
+                newtext.id='h3';
+                newtext.innerText="varsha"
+                myform.append(newtext)
+                
+
+               }
+        }
+    </script>
+</head>
+<body>
+    <h3 > Welcome to Recap of javascripit</h3>
+    Friends:<input type="text" id="frnd">
+    <input type="button" value=" Click" onclick="display()" >
+    <p id="head"></p>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+         function calculator(num3,num4,opp){
+            if(num3==undefined|| num4==undefined || opp==undefined){
+                alert("Please fill in all the fields")
+                return;
+            }
+
+
+        else if(opp.toLowerCase()  =='add'){
+            num5= num3+num4;
+            alert("The Additiion of two give numbers is" +num5 )
+
+        }
+        else if(opp.toLowerCase()  =='sub'){
+            num5= num3-num4;
+            alert("The Subtraction of two give numbers is" +num5 )
+
+        }
+        else if (opp.toLowerCase()  =='mul'){
+            num5= num3*num4;
+            alert("The Multiplication of two give numbers is" +num5 )
+
+        }
+        else if(opp.toLowerCase()  =='div'){
+            num5= num3/num4;
+            alert("The Division  of two give numbers is" +num5 )
+
+        }
+        else{
+            alert(`Invalid Operation ${opp}  `)
+        }
+    }
+
+    function calculateEMI(P,N,R){
+            if(P==undefined|| N==undefined || R==undefined){
+                alert("Please fill in all the fields")
+                return;
+            }
+            else{
+               let  EMI = [P * R * (1+R) ^N]/[(1+R) ^N-1]
+               alert ("The EMI per Month  for the Given Data is " +EMI)
+            }
+
+    }
+    
+    </script>
+    <input type="button" value="AddNumbers" onclick="calculator(12,6,'add')"><br/><br/>
+    <input type="button" value="SubNumbers" onclick="calculator(12,6,'sub')"><br/><br/>
+    <input type="button" value="MulNumbers" onclick="calculator(12,5,'mul')"><br/><br/>
+    <input type="button" value="DivNumbers" onclick="calculator(12,6,'div')"><br/><br/>
+
+    <input type="button" value="DivNumbers" onclick="calculator(12,6,'divhh')"><br/><br/>
+
+    <input type="button" value="Calculator1" onclick="calculateEMI(100000,12,5)"><br/></br>
+    <input type="button" value="Calculator2" onclick="calculateEMI(12)"><br/>
+</head>
+<body>
+    
+</body>
+</html>

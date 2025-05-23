@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pin(){
+    var pincode=document.getElementById("pin").value;
+    var diss=document.getElementById("dis");
+    var state=document.getElementById("sta");
+    if(pincode=='560029'){
+        
+        state.value="Karnataka";
+        diss.value="Bangalore";
+        
+    }
+    else if(pincode=='500011'){
+        diss.value="Hyderabad";
+        state.value="Telangana";
+    }
+ }
+
+    </script>
+</head>
+<body>
+    Pincode:&nbsp;&nbsp;&nbsp;<input type="number" id="pin" onchange="pin()" ><br>
+    District:&nbsp;&nbsp;&nbsp;<input  type="text" id="dis" disabled ><br>
+    State:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input   type="text"  id="sta" disabled><br>
+    
+</body>
+</html>

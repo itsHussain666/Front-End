@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+    <script>
+         aplah='';
+        
+        function check(exp){
+            
+            const regex=/^[A-Z][a-z]{3}/;
+        let lastchar=exp.value.charAt(exp.value.length -1);
+       ress=lastchar.search(regex);
+    if(ress>=0){
+        aplah=aplah+exp.value;
+        exp.value=""+alpha;
+    }  
+    else{
+        alert("only enter digit")
+        exp.value=""+aplah;
+    }
+      
+}
+    </script>
+
+</head>
+<body>
+    ENTER: <input type="text"  onkeyup="check(this)">
+    <div id="alt"></div>
+</body>
+</html>

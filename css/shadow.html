@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Shadow</title>
+    <style>
+
+        @font-face {
+            font-family: freedom;
+            src: url(freedom.ttf);
+        }
+        h1{
+            text-align: center;
+            color: rgb(31, 31, 229);
+            text-shadow: 20px 10px 5px green,
+            -3px -10px 5px rgb(255, 115, 0) ;
+            font-family: freedom ;
+           transform:  rotate(0deg) translateX(100px) scale(2) ;
+           
+
+        }
+        h1:hover{
+            transform:  rotate(-360deg) translateX(100px) scale(2) ;
+            color:rgb(212, 32, 62) ;
+            transition:  transform 
+             5s ease-in -2s ;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <h1> Syed Zahid Hussain</h1>
+    
+</body>
+</html>

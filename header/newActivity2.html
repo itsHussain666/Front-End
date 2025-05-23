@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(){
+            let userName=document.getElementById('uname').value;
+            let message=document.getElementById('msg')
+            if(userName.length<5){
+                message.innerHTML=`<font color="red">User Name must be of 5 characters`
+                  }
+                  else{
+                    message.innerHTML=`<font color="green">Welcome, ${userName}`
+
+                  }
+        }
+        
+    </script>
+</head>
+<body>
+   User Name: <input type="text" id="uname" onkeyup="display()" >
+   <div id="msg"> </div>
+
+</body>
+</html>
