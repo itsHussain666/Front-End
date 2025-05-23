@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+    <script>
+        var cities=["Agra","Delhi","Gorakhpur","Aligarh"];
+        for(i=0; i<cities.length;i++){
+             document.writeln(`<h2>The ${i+1} City in UP is ${cities[i]}`);
+              }
+            document.writeln("</br>The another way of Loop")
+            for(j in cities)
+            document.write(`<h2> The ${parseInt(j)+1} in UP is ${cities[j]}`)
+
+        var states=new Array();
+        states[0]="Tamil Nadu";
+        states[1]="Kerala";
+        states[2]="Andhra";
+        states[3]="Mangalore";
+        states[4]="Coimbatore";
+        for(k in states){
+            document.write(`</br><h2> ${parseInt(k)+1}      South Indian state is ${states[parseInt(k)+1]}`)
+        }
+        document.write("</br><h2>Congrats ,you will get the T-Shirt.")
+            document.write("</br><h2>T-Shirt will be delivered as per colors Availability.")
+            
+            colors=["Green","Red","Yellow","Blue","Violet"]
+            
+            document.write(`</br><h2>You have Selected ${colors.length} colors.`)
+            for(i in colors)
+            document.writeln(`</br><h3>Your Choice ${parseInt(i)+1} Color is : ${colors[i]}</br>`)
+
+    </script>
+</head>
+<body>
+    <script>
+        var place="pune,maharashtra,karnataka,kerala,tamilnadu";
+        document.write("</br></br>String Operations</br>")
+        document.write("</br> Upper case " + place.toUpperCase());
+        var sea =prompt
+        ("PUNE,MAHARASHTRA,KARNATAKA,KERALA,TAMILNADU any above state  to search ")
+        var ress=place.search(sea.toUpperCase());
+        if(ress)
+    {
+        document.writeln(`</br>${sea} is present`)
+    }
+    else{
+        document.writeln(`</br>${sea} is not  present`)
+
+    }
+    document.write("</br></br>Fruits by a data split</br>")
+    var data="apple:banana:mango:watermelon";
+    var fruits= data.split(":");
+    document.writeln("The no.of fruits are "+fruits.length);
+    for(l in fruits){
+        document.write(`</br>${parseInt(l)+1} fruit is ${fruits[l]}`)
+    }
+
+    
+    </script> 
+    
+</body>
+</html>

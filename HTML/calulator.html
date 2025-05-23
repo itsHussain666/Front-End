@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        opp='';
+        function calculate(n){
+            opp=opp+n.value;
+            var   outpu=document.getElementById("output");
+            outpu.innerHTML=""+opp;
+    }
+        function cal(){
+            m= eval(opp);
+          var  outpu=document.getElementById("output");
+            outpu.innerHTML=""+m;
+        }
+        function clear(){
+           var  p=opp+1
+            
+            var  outpu=document.getElementById("output");
+            outpu.innerHTML =''+  p ;
+        
+           
+
+
+        }
+    </script>
+</head>
+<link type="text/css" rel="stylesheet" href="calculator.css">
+<body><form>
+    <table >
+        <tr><h3>
+             <div>&#x1F5A9; &nbsp; Calculator&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#x25A1; &nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;X
+            
+             
+             </div>
+        </tr>
+        <tr>
+            <h2>&#9776; &nbsp;&nbsp; Standard 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  
+            </h2>
+        </tr>
+        <tr><h1 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="output">0</span></h1></tr>
+        <div>&nbsp;&nbsp;MC &nbsp;&nbsp; 
+            MR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            M+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            M-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            MS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mv </div>
+        <tr>
+            <td><button value="">%</button></td>
+            <td><button value="">CE</button></td>
+            <td><input type="button"  value="C" onclick="clear()"></button></td>
+            <td><button value="">&#9003</button></td>
+        </tr>
+        <tr>
+            <td><button value="">&sup1/x</button></td>
+            <td><button value="">x&sup2</button></td>
+            <td><button value="">&sup2&radic;x</button></td>
+            <td><input type="button"  value="/" onclick="calculate(this)"></button></td>
+        </tr>
+        <tr>
+            <td><input type="button"  value="7" onclick="calculate(this)"></button></td>
+            <td><input type="button"   value="8" onclick="calculate(this)"></button></td>
+            <td><input type="button"  value="9" onclick="calculate(this)"></button></td>
+            <td><input type="button"  value="*" onclick="calculate(this)"></button></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="calculate(this)"></button></td>
+            <td><input type="button"  value="5" onclick="calculate(this)"></button></td>
+            <td><input type="button"  value="6" onclick="calculate(this)"></button></td>
+            <td><input type="button" value="-" onclick="calculate(this)"></button></td>      
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="calculate(this)"></button></td>
+            <td><input type="button" value="2" onclick="calculate(this)"></button></td>
+            <td><input type="button" value="3" onclick="calculate(this)"></button></td>
+            <td><input type="button" value="+" onclick="calculate(this)"></button></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="+/-"></td>
+            <td><input type="button" value="0"></td>
+            <td><input type="button" value="."></td>
+            <td ><input type="button"  value="=" onclick="cal()" style="background-color: rgb(42, 42, 235);"></button></td>
+        </tr>
+    </table>
+    <p></p>
+    
+</body>
+</html>

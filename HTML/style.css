@@ -1,0 +1,35 @@
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color:brown;
+    background: #000;
+}
+
+   
+    tr{
+        color:blueviolet;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 20px;
+    }
+body{
+    background:aqua;
+}
+h2{
+    text-align:center;
+    text-decoration:overline;
+    text-transform: capitalize;
+    font-size: 25px;
+    font-style: italic;
+}
+ol{
+    list-style-type: upper-latin;
+}
+ul{
+    list-style-image: url("tiny-house.png");
+}
+
+ul,ol{
+    color: brown;
+    font-size: 20px;
+}
+    

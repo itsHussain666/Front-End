@@ -1,0 +1,36 @@
+<!-- Write a function called addToCart(cart, product) that:
+
+Checks if the product (by id) already exists in the cart.
+
+If it does, increase the quantity of that product.
+
+If it doesn’t, add the product to the cart with quantity set to 1 (or use the product's existing quantity if provided).
+
+Here’s an example of how the function might be used:
+
+const newProduct = { id: 2, name: "Mouse", price: 25 }; // should increment quantity
+const anotherProduct = { id: 3, name: "Keyboard", price: 45 }; // should be added to cart
+
+cart = addToCart(cart, newProduct);
+cart = addToCart(cart, anotherProduct);
+
+console.log(cart); -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addToCart(id,product,price){
+            const newProduct={pid:pid,pname:product,pprice:price};
+           console.log(newProduct)
+       }
+    </script>
+</head>
+<body>
+    <input type="button"  value="click"    onclick="addToCart('p1','bottle','200')">
+    
+</body>
+</html>

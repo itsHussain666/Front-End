@@ -1,0 +1,15 @@
+table{
+    background-color:rgb(249, 248, 248);
+    
+}
+td{
+    padding:2px ;
+    
+}
+button{
+    
+    background-color: white;
+    border: 0;
+    font-size: medium;
+    padding: 20px 27px;
+}

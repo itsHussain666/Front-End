@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Validate</title>
+</head>
+<body>
+    <form action="MeterDoctor.html">
+        First Name:
+        <input type="text"  name="fname" required autocomplete="off" ><br/>
+
+        Last Name:
+        <input type="text" name="lname"><br/>
+        Email:
+        <input type="email" name="email" required autocomplete="off"><br/>
+        <br/>
+        How did u heard About us:
+        <input list="heard" name ="reference" id="reference">
+        <datalist id="heard">
+            <option value="Newspaper">
+            <option value="Call">
+            <option value="SMS">
+        </datalist>
+        <br/>
+        Pincode:
+        <input type="text"><br/>
+        District:
+        <input type="text" readonly value="Bangalore"><br/>
+        State:<input type="text" disabled value="Karnataka"><br/>
+        Enter date:
+        <input type="date"><br/>
+        Enter Time
+        <input type="time"><br/>
+        Enter Colour:
+        <input type="color"><br/>
+        <input type="submit" value="Register">
+        <input type="submit" value="Delete" formaction="footer.html">
+    
+    </form>
+    <br/>
+    <br/>
+    <br/>
+    <form oninput="res.value=parseInt(fir.value)+parseInt(sec.value)">
+        Enter a Number<input type="number" name="fir" value="0"><br/>
+        Enter a Number<input type="number" name="sec" value="0"><br/>
+        The Addition of both the Numbers =<output name="res">
+        <br/>
+        <video src="wildlife.mp4" height="400" width="500" autoplay controls></video>
+    </form>
+
+    
+</body>
+</html>

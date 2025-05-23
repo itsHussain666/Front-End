@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <form align="center" action="MeterDoctor.html" >
+    <h2>Login Form</h2>
+    <table bgcolor="darkorange" align="center" cellpadding="15">
+        <tr>
+            <td> UserName:</td>
+            <td><input type="text" placeholder="Enter your Name" name="username" required autocomplete="off" ></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" placeholder="password" name="password" required autofocus></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" name="gender" value="male" required >Male
+                <input type="radio" name="gender" value="female">Female
+                <inpuptt type="radio" name="gender" value="others">Others        
+            </td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>
+                <input type="checkbox" name="id" value="voterid">Voter ID 
+                <input type="checkbox" name="id" value="adhaar" required >Adhaar
+                <input type="checkbox" name="id" value="passport">Passport 
+            
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Role
+            </td>
+            <td>
+                <select name="role">
+                    <option value="admin">Admin</option>
+                    <option value="employee">Employee</option>
+                    <option value="guest">Guest</option>
+                    <option value="others">Others</option>
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Communication
+            </td>
+            <td>
+                <select name="commu"  >
+                    <option>----select----</option>
+                    <option value="call">Call</option>
+                    <option value="sms">SMS</option>
+                    <option value="email" >Email</option>
+                    <option value="post">Post</option>
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td >Comments:</td>
+            <td> <textarea cols="25" rows="4" name="textarea"></textarea></td>
+        </tr>
+
+
+        <tr>
+            <td></td>
+            <td align="center"><input type="submit">
+            &nbsp; &nbsp;<input type="reset" >
+            &nbsp; &nbsp;<input type="submit" value="Register" formaction="about.html"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
