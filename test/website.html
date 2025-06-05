@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+       function change(){
+            var newcard=document.getElementById("card").className;
+            var darkcard="darkcard";
+            if(newcard=="card"){
+                newcard.className="darkcard"
+            }
+            else if(newcard=="darkcard"){
+                newcard="card";
+            }
+            
+        }
+    </script> -->
+    <script>
+        function change(){
+             var cardElement = document.getElementById("card"); // Get the actual element
+             var darkcard = "darkcard";
+             if(cardElement.className === "card"){
+                 cardElement.className = "darkcard"; // Update class correctly
+             }
+             else if(cardElement.className === "darkcard"){
+                 cardElement.className = "card"; // Switch back to light theme
+             }
+         }
+     </script>
+     
+
+    <style>
+        .darkcard{
+            border: black solid 2px;
+            height: 260px;
+            width: 400px;
+            color: white;
+            background-color: black;
+
+        }
+        .card{
+            border: black solid 2px;
+            height: 260px;
+            width: 400px;
+           
+        }
+        
+    </style>
+</head>
+<body align="center">
+    <div class="card" id="card" >
+        <h2> METER DOCTOR</h2>
+        <p aria-disabled="true">a title, which named on  My Skill's  <br>which i have developed in last 4 years 
+            by my Smartwork and Hardwork in a brach of Mechanical field which is Speedo Meter's.<br>
+         I am a technisian who Repair ALL kinds of Speedo Meters (Analog as well as Digital) in an Affordable price for 
+        the customers who face issue's regarding thier vehicles Speedometer.</p>
+        <footer><button onclick="change()" style="border-radius: 5px;;">Light Theme</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="change()"
+            style="border-radius: 5px;background-color: black; color: white;">Dark Theme</button></footer>
+        
+
+
+    </div>
+</body>
+</html>
