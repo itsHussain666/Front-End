@@ -1,0 +1,28 @@
++> React 
+
+1> const [searchTerm, setSearchTerm] = useState("");
+2> const filteredBooks = books.filter(book =>
+    book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    book.author.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+3><input 
+          type="text" 
+          placeholder="🔍 Search books..." 
+          value={searchTerm}
+          onChange={handleSearch} 
+          className="form-control"
+        />
+
+4> {filteredBooks.map(book => (
+            <tr key={book.id}>
+            <td>{book.title}</td>
+
+              <td>{book.author}</td>
+              <td>{book.genre}</td>
+              <td>{book.publication_year}</td>
+              <td>
+                <Link to={`/editBook/${book.id}`} className="btn btn-primary" >Edit</Link> &nbsp;  <button className="btn btn-danger" onClick={() => handleDelete(book.id)}>Delete</button>
+
+              </td>
+            </tr>
+          ))}
